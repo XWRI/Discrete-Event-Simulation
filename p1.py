@@ -8,7 +8,7 @@ def generate_event (rate):
 def process_arrival_event(time, buffer, global_arrival_events):
     pass
 
-def process_departure_event(time, buff global_departure_events):
+def process_departure_event(time, buffer, global_departure_events):
     pass
 
 def simulation():
