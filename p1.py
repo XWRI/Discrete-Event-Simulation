@@ -5,11 +5,11 @@ def generate_event (rate):
      u = drand48()
      return ((-1/rate)*log(1-u))
 
-def process_arrival_event(time):
+def process_arrival_event(time, buffer, global_arrival_events):
+    pass
 
-
-def process_departure_event(time):
-
+def process_departure_event(time, buff global_departure_events):
+    pass
 
 def simulation():
     global_arrival_events = []  #global event list
@@ -28,10 +28,10 @@ def simulation():
         curr_arrival_event = global_arrival_events[0]
         curr_departure_event = global_departure_events[0]
         if i == curr_arrival_event:
-            process_arrival_event(curr_arrival_event)
+            process_arrival_event(curr_arrival_event, buffer, global_arrival_events)
             global_arrival_events = global_arrival_events[1:]
         if i == curr_departure_event:
-            process_departure_event(curr_departure_event)
+            process_departure_event(curr_departure_event, buffer, global_arrival_events)
             global_departure_events = global_departure_events[1:]
         # update the busy time for the server
         # update the number of packets in the queue
